@@ -58,7 +58,7 @@
 
 .infoBlock p {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 0.75rem;
   color: #333;
 }
@@ -171,5 +171,11 @@
 
   .infoBlock, .contactForm {
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 468px) {
+  .infoBlock {
+    font-size: 0.8rem;
   }
 }
