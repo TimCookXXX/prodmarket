@@ -11,9 +11,9 @@ const SplashScreen = ({ onFinish }) => {
   useEffect(() => {
     const sequence = async () => {
       await controls.start("visible");
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       await controls.start("pulse");
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       await controls.start("exit");
       onFinish();
     };
@@ -43,17 +43,17 @@ const SplashScreen = ({ onFinish }) => {
   const containerVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {
-      opacity: 1,
+      opacity: 0.8,
       scale: 1,
       transition: {
-        duration: 1.5,
+        duration: 1,
         ease: "easeOut",
       },
     },
     pulse: {
       scale: [1, 1.05, 1],
       transition: {
-        duration: 2,
+        duration: 0.8,
         times: [0, 0.5, 1],
         repeat: 1,
         repeatType: "reverse",
@@ -63,7 +63,7 @@ const SplashScreen = ({ onFinish }) => {
       opacity: 0,
       scale: 0.8,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeIn",
       },
     },
