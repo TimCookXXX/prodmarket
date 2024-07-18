@@ -1,0 +1,36 @@
+.carouselContainer {
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carouselTrack {
+    display: flex;
+    width: fit-content;
+}
+
+.carouselItem {
+    flex: 0 0 auto;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.carouselItem img {
+    height: 80px;
+    width: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.carouselItem:hover img {
+    filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+    .carouselItem {
+        margin: 0 10px;
+    }
+
+    .carouselItem img {
+        height: 60px;
+    }
+}

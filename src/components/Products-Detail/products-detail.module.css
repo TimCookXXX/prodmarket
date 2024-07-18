@@ -1,0 +1,175 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.productHero {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.imageSection {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.imageSection:hover .productImage {
+  transform: scale(1.05);
+}
+
+.badgeContainer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.badge {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+}
+
+.infoSection {
+  flex: 1;
+}
+
+.productTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.productDescription {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.productMeta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.productCategory, .productWeight {
+  font-size: 1.1rem;
+  color: #718096;
+  font-weight: 600;
+}
+
+.serviceInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.serviceCard {
+  background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.serviceIcon {
+  font-size: 2.5rem;
+  color: #3182ce;
+  margin-bottom: 1rem;
+}
+
+.serviceCard h3 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.serviceCard p {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.error {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #e53e3e;
+  margin-top: 2rem;
+}
+
+@media (max-width: 968px) {
+  .productHero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .imageSection, .infoSection {
+    width: 100%;
+  }
+
+  .productTitle {
+    font-size: 2.5rem;
+  }
+
+  .badgeContainer {
+    top: 10px;
+    right: 10px;
+  }
+
+  .badge {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .productTitle {
+    font-size: 2rem;
+  }
+
+  .serviceInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .productMeta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .badgeContainer {
+    top: 5px;
+    right: 5px;
+  }
+
+  .badge {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+}

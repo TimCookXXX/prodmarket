@@ -1,0 +1,175 @@
+.contactsSection {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 3rem;
+}
+
+.infoColumn {
+  flex: 1;
+}
+
+.mapColumn {
+  flex: 1;
+}
+
+.infoBlock {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.infoBlock h3 {
+  font-size: 1.3rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.infoBlock p {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.infoBlock p .icon {
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+  color: #007bff;
+}
+
+.infoBlock a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.infoBlock a:hover {
+  color: #0056b3;
+}
+
+.workingHours, .requisites {
+  list-style: none;
+  padding: 0;
+}
+
+.workingHours li, .requisites li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.mapWrapper {
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.contactForm {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm h3 {
+  font-size: 1.3rem;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.contactForm p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm input,
+.contactForm textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contactForm textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contactForm button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contactForm button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 968px) {
+  .contentWrapper {
+    flex-direction: column;
+  }
+
+  .mapColumn {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .infoBlock, .contactForm {
+    padding: 1.5rem;
+  }
+}

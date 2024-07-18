@@ -1,0 +1,78 @@
+.breadcrumbs {
+  background-color: #f8f9fa;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumbsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbItem:not(:last-child)::after {
+  content: "/";
+  margin: 0 0.5rem;
+  color: #adb5bd;
+}
+
+.breadcrumbLink {
+  color: #495057;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #007bff;
+}
+
+.breadcrumbCurrent {
+  color: #6c757d;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.homeIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #495057;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .breadcrumbLink,
+  .breadcrumbCurrent {
+    font-size: 0.75rem;
+  }
+
+  .homeIcon {
+    width: 1rem;
+    height: 1rem;
+  }
+}

@@ -1,0 +1,86 @@
+.location {
+    padding: 4rem 0;
+    background-color: #f7fafc;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 3rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.mapContainer {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.map {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.infoContainer {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.companyName {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+}
+
+.address, .contactInfo {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+.icon {
+    margin-right: 0.75rem;
+    color: #3182ce;
+    flex-shrink: 0;
+}
+
+.contactInfo a {
+    color: #3182ce;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contactInfo a:hover {
+    color: #2c5282;
+    text-decoration: underline;
+}
+
+@media (max-width: 968px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .mapContainer {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .infoContainer {
+        max-width: 100%;
+    }
+}
