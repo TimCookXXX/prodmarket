@@ -14,6 +14,7 @@ import Partners from "./pages/Partners/Partners";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SplashScreen from "./components/Splash/Splash";
+import ContactsForm from "./components/ContactsForm/ContactsFrom";
 
 const Layout = () => (
   <>
@@ -60,6 +61,10 @@ function App() {
         {
           path: "delivery",
           element: <Delivery />,
+        },
+        {
+          path: "form",
+          element: <ContactsForm />,
         },
         {
           path: "partners",
