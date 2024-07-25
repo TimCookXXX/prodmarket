@@ -33,7 +33,15 @@ const Contacts = () => {
               </p>
               <p>
                 <Phone className={styles.icon} />
-                <a href="tel:+79183338558">8-918-333-85-58</a>
+                <a href="tel:+79183338558">+7 (918) 333-85-58</a>
+              </p>
+              <p>
+                <Phone className={styles.icon} />
+                <a href="tel:+79615005775">+7 (961) 500-57-75</a>
+              </p>
+              <p>
+                <Phone className={styles.icon} />
+                <a href="tel:+79282345000">+7 (928) 234-50-00</a>
               </p>
               <p>
                 <Mail className={styles.icon} />
