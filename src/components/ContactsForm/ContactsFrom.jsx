@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 import styles from "./contacts-form.module.css";
 
 const ContactsForm = ({ isOpen, onClose, productTitle }) => {
@@ -14,6 +15,7 @@ const ContactsForm = ({ isOpen, onClose, productTitle }) => {
     email: false,
     phone: false,
   });
+  const [agreedToPolicy, setAgreedToPolicy] = useState(false);
 
   const googleFormUrl = import.meta.env.VITE_GOOGLE_FORM_URL;
 
@@ -111,7 +113,7 @@ const ContactsForm = ({ isOpen, onClose, productTitle }) => {
     setErrors(newErrors);
     setTouched({ name: true, email: true, phone: true });
 
-    if (!Object.values(newErrors).some(Boolean)) {
+    if (!Object.values(newErrors).some(Boolean) && agreedToPolicy) {
       setIsSubmitted(true);
 
       const formData = new FormData();
@@ -134,6 +136,7 @@ const ContactsForm = ({ isOpen, onClose, productTitle }) => {
             setPhone("");
             setErrors({});
             setTouched({ name: false, email: false, phone: false });
+            setAgreedToPolicy(false);
           }, 2000);
         })
         .catch((error) => {
@@ -245,7 +248,26 @@ const ContactsForm = ({ isOpen, onClose, productTitle }) => {
                 {errors.phone}
               </span>
             </div>
-            <button type="submit" className={styles.submitButton}>
+            <div className={styles.checkboxGroup}>
+              <input
+                type="checkbox"
+                id="privacyPolicy"
+                checked={agreedToPolicy}
+                onChange={(e) => setAgreedToPolicy(e.target.checked)}
+                className={styles.checkbox}
+              />
+              <label htmlFor="privacyPolicy" className={styles.checkboxLabel}>
+                Я согласен с{" "}
+                <Link to="/privacy">политикой конфиденциальности</Link>
+              </label>
+            </div>
+            <button
+              type="submit"
+              className={`${styles.submitButton} ${
+                !agreedToPolicy ? styles.submitButtonDisabled : ""
+              }`}
+              disabled={!agreedToPolicy}
+            >
               Отправить
             </button>
           </form>
