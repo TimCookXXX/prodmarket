@@ -72,9 +72,6 @@ const Footer = () => {
             <li>
               <Link to="/privacy">Политика конфиденциальности</Link>
             </li>
-            <li>
-              <Link to="/terms">Условия использования</Link>
-            </li>
           </ul>
         </div>
       </div>

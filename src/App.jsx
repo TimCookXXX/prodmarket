@@ -15,6 +15,7 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SplashScreen from "./components/Splash/Splash";
 import ContactsForm from "./components/ContactsForm/ContactsFrom";
+import Privacy from "./pages/Privacy/Privacy";
 
 const Layout = () => (
   <>
@@ -73,6 +74,10 @@ function App() {
         {
           path: "contacts",
           element: <Contacts />,
+        },
+        {
+          path: "privacy",
+          element: <Privacy />,
         },
         {
           path: "catalog",

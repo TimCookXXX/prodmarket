@@ -9,7 +9,8 @@ const Breadcrumbs = () => {
     delivery: "Доставка",
     catalog: "Каталог",
     partners: 'Партнерам',
-    contacts: "Контакты"
+    contacts: "Контакты",
+    privacy: 'Политика конфиденциальности',
   };
 
   const translate = (name) => {

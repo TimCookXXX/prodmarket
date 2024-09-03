@@ -40,6 +40,7 @@
 .callButton {
     background-color: #4a90e2;
     color: white;
+    gap: 0.5rem;
 }
 
 .callButton:hover {
@@ -52,6 +53,7 @@
     color: white;
     border: none;
     cursor: pointer;
+    gap: 0.5rem;
 }
 
 .formButton:hover {
