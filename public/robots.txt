@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Prevent indexing of potential sensitive areas
+Disallow: /form
+
+# Allow access to important pages
+Allow: /catalog
+Allow: /delivery
+Allow: /partners
+Allow: /contacts
+Allow: /privacy
+
+# Prevent indexing of Firebase-specific paths
+Disallow: /__/
+Disallow: /.well-known/
+
+# Sitemap location
+Sitemap: https://prodmarket-shop.ru/sitemap.xml
