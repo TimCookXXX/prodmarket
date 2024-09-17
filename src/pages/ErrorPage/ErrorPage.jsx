@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import { Home } from "lucide-react";
 import styles from "./error-page.module.css";
+import { useEffect } from "react";
 
 const ErrorPage = () => {
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.httpEquiv = "status";
+    meta.content = "404";
+    document.head.appendChild(meta);
+  }, []);
   return (
     <div className={styles.errorContainer}>
       <div className={styles.content}>

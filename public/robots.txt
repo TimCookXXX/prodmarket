@@ -15,5 +15,9 @@ Allow: /privacy
 Disallow: /__/
 Disallow: /.well-known/
 
+# Prevent indexing of 404 pages and other error pages
+Disallow: /404
+Disallow: /error
+
 # Sitemap location
 Sitemap: https://prodmarket-shop.ru/sitemap.xml

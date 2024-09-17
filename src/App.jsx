@@ -11,11 +11,12 @@ import Breadcrumbs from "./components/BreadCrumbs/BreadCrumbs";
 import Delivery from "./pages/Delivery/Delivery";
 import Contacts from "./pages/Contacts/Contacts";
 import Partners from "./pages/Partners/Partners";
-import ErrorPage from "./pages/ErrorPage/ErrorPage";
+// import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import SplashScreen from "./components/Splash/Splash";
 import ContactsForm from "./components/ContactsForm/ContactsFrom";
 import Privacy from "./pages/Privacy/Privacy";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 const Layout = () => (
   <>
@@ -53,7 +54,7 @@ function App() {
     {
       path: "/",
       element: <Layout />,
-      errorElement: <ErrorPage />,
+      errorElement: <ErrorBoundary />,
       children: [
         {
           index: true,
