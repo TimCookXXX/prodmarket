@@ -55,7 +55,7 @@ const Contacts = () => {
               </h3>
               <ul className={styles.workingHours}>
                 <li>
-                  <span>Пн-Пт:</span> <span>8:00 - 17:00</span>
+                  <span>Пн-Пт:</span> <span>9:00 - 17:00</span>
                 </li>
                 <li>
                   <span>Сб:</span> <span>9:00 - 12:00</span>
